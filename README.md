@@ -8,7 +8,7 @@ Este projeto tem como objetivo coletar, tratar e armazenar dados de livros a par
       - Fonte: [Open Library API](https://openlibrary.org/search.json)
       - Parâmetros de busca: `"harry potter OR lords of the rings OR jane austen"`
       - Campos extraídos: `title`, `publish_year`, `author_key`, `author_name`, `subject`
-      - Limite de registros: 10.000
+      - Limite de registros: 1.000
       - Requisições realizadas com `requests` e tratamento com `pandas`
 
   2. **Tratamento (ETL) com Python**
