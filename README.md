@@ -1,13 +1,13 @@
 # ETL API Livros
 
-Este projeto tem como objetivo coletar, tratar e armazenar dados de livros a partir da API pública da Open Library, utilizando técnicas de ETL com Python e integração direta com banco de dados MySQL.
+Este projeto tem como objetivo coletar, tratar e armazenar dados de livros a partir da API pública da Open Library, utilizando técnicas de ETL (Extract, Transform, Load) com Python e integração direta com MySQL.
 
 ## 📊 Etapas do Projeto
 
   1. **Coleta dos Dados**
       - Fonte: [Open Library API](https://openlibrary.org/search.json)
-      - Parâmetros de busca: `"harry potter OR lords of the rings OR jane austen"`
-      - Campos extraídos: `title`, `publish_year`, `author_key`, `author_name`, `subject`
+      - Parâmetros de busca: `title:harry potter OR title:lords of the rings OR author:jane austen`
+      - Campos extraídos: `title, publish_year, author_key, author_name, subject`
       - Limite de registros: 1.000
       - Requisições realizadas com `requests` e tratamento com `pandas`
 
@@ -23,4 +23,9 @@ Este projeto tem como objetivo coletar, tratar e armazenar dados de livros a par
       - Criação de tabelas normalizadas
       - Conexão direta com MySQL via `SQLAlchemy` e `pymysql`
       - Importação dos dados tratados via código Python
-     
+      - Criação de tabelas principais e de relacionamento
+      - Inclusão de Functions
+      - Inclusão de Procedures
+      - Inclusão de Views
+      - Inclusão de exemplos de consultas internas
+        
