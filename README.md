@@ -1,50 +1,44 @@
-# ETL API Livros
+## ETL API Livros
 
-Este projeto tem como objetivo coletar, tratar e armazenar dados de livros a partir da API pública da Open Library, utilizando técnicas de ETL (Extract, Transform, Load) com Python e integração direta com MySQL.
+Pipeline de ETL desenvolvido em Python para coletar dados da Open Library API, tratá-los com Pandas e carregar tudo em um banco de dados MySQL com tabelas normalizadas, procedures, functions e views.
 
-## 📊 Etapas do Projeto
+### 🔍 Etapas do Projeto
+1. Extração (API Open Library)
+- Endpoint: https://openlibrary.org/search.json  
+- Consultas por: Harry Potter, Lord of the Rings e Jane Austen  
+- Campos coletados: título, ano de publicação, autor e assunto  
+- Limite de 1.000 registros  
 
-  1. **Coleta dos Dados**
-      - Fonte: [Open Library API](https://openlibrary.org/search.json)
-      - Parâmetros de busca: `title:harry potter OR title:lords of the rings OR author:jane austen`
-      - Campos extraídos: `title, publish_year, author_key, author_name, subject`
-      - Limite de registros: 1.000
-      - Requisições realizadas com `requests` e tratamento com `pandas`
+2. Transformação (Python)
+- Limpeza de texto (lowercase, remoção de acentos)  
+- Normalização de colunas com listas  
+- Criação de DataFrames auxiliares (ex.: autores únicos)  
 
-  2. **Tratamento (ETL) com Python**
-      - Remoção de acentos com `Unidecode`
-      - Padronização de textos em minúsculas
-      - Conversão de colunas com listas (ex: `author_name`) em DataFrames de strings únicas
-      - Criação de DataFrame com autores únicos, ordenados alfabeticamente
-      - Manipulação e transformação de dados com `pandas`
-      - Desenvolvimento realizado via VS Code
+3. Carga (MySQL)
+- Criação de tabelas normalizadas  
+- Inserts via Python (SQLAlchemy + pymysql)  
+- Criação de procedures, functions, views e consultas de exemplo  
 
-  3. **Armazenamento em Banco de Dados (MySQL)**
-      - Criação de tabelas normalizadas
-      - Conexão direta com MySQL via `SQLAlchemy` e `pymysql`
-      - Importação dos dados tratados via código Python
-      - Criação de tabelas principais e de relacionamento
-      - Inclusão de Functions
-      - Inclusão de Procedures
-      - Inclusão de Views
-      - Inclusão de exemplos de consultas internas
-    
-  ## 🗂️ Estrutura do Repositório
+### ▶️ Como Executar
+- git clone https://github.com/bavsvalle/etl-api-livros.git  
+- cd etl-api-livros  
+- python -m venv venv  
+- source venv/bin/activate  # ou venv\Scripts\activate no Windows  
+- pip install -r requirements.txt  
+- Configure o .env com suas credenciais MySQL e rode o notebook.
 
-  etl-api-livros/  
-  ├── .env  
-  ├── .gitattributes  
-  ├── .gitignore   
-  ├── README.md  
-  │  
-  ├── notebooks/  
-  │ └── api_livros.ipynb  
-  │  
-  └── sql/  
-  ├── 01_create_tables.sql  
-  ├── 02_insert.sql  
-  ├── 03_function.sql  
-  ├── 04_procedure.sql  
-  ├── 05_views.sql  
-  └── 06_consultas.sql  
+### 🛠️ Tecnologias
+Python · Pandas · Requests · SQLAlchemy · PyMySQL · MySQL · Jupyter Notebook
+
+### 📂 Estrutura do Repositório
+etl-api-livros/  
+├── notebooks/  
+│   └── api_livros.ipynb  
+└── sql/  
+    ├── 01_create_tables.sql  
+    ├── 02_insert.sql  
+    ├── 03_function.sql  
+    ├── 04_procedure.sql  
+    ├── 05_views.sql  
+    └── 06_consultas.sql  
           
