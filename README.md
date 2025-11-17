@@ -28,4 +28,23 @@ Este projeto tem como objetivo coletar, tratar e armazenar dados de livros a par
       - Inclusão de Procedures
       - Inclusão de Views
       - Inclusão de exemplos de consultas internas
-        
+    
+  ## 🗂️ Estrutura do Repositório
+
+  etl-api-livros/  
+  ├── .env  
+  ├── .gitattributes  
+  ├── .gitignore   
+  ├── README.md  
+  │  
+  ├── notebooks/  
+  │ └── api_livros.ipynb  
+  │  
+  └── sql/  
+  ├── 01_create_tables.sql  
+  ├── 02_insert.sql  
+  ├── 03_function.sql  
+  ├── 04_procedure.sql  
+  ├── 05_views.sql  
+  └── 06_consultas.sql  
+          
