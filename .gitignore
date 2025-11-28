@@ -1,4 +1,3 @@
 .env
-venv/
+.venv/
 __pycache__/
-requiriments_copia.txt
