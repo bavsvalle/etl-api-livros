@@ -1,3 +1,10 @@
+![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?logo=pandas&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-005C84?logo=mysql&logoColor=white)
+![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-D71F00?logo=redhat&logoColor=white)
+![Jupyter](https://img.shields.io/badge/Jupyter-F37821?logo=jupyter&logoColor=white)
+![ETL Pipeline](https://img.shields.io/badge/ETL-Pipeline-blue)
+
 ## ETL API Livros
 
 Pipeline de ETL desenvolvido em Python para coletar dados da Open Library API, tratá-los com Pandas e carregar tudo em um banco de dados MySQL com tabelas normalizadas, procedures, functions e views.
@@ -31,14 +38,14 @@ Pipeline de ETL desenvolvido em Python para coletar dados da Open Library API, t
 Python · Pandas · Requests · SQLAlchemy · PyMySQL · MySQL · Jupyter Notebook
 
 ### 📂 Estrutura do Repositório
-etl-api-livros/  
-├── notebooks/  
-│   └── api_livros.ipynb  
-└── sql/  
-    ├── 01_create_tables.sql  
-    ├── 02_insert.sql  
-    ├── 03_function.sql  
-    ├── 04_procedure.sql  
-    ├── 05_views.sql  
-    └── 06_consultas.sql  
+    etl-api-livros/  
+    ├── notebooks/  
+    │   └── api_livros.ipynb  
+    └── sql/  
+        ├── 01_create_tables.sql  
+        ├── 02_insert.sql  
+        ├── 03_function.sql  
+        ├── 04_procedure.sql  
+        ├── 05_views.sql  
+        └── 06_consultas.sql  
           
