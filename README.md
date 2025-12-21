@@ -5,7 +5,7 @@
 ![Jupyter](https://img.shields.io/badge/Jupyter-F37821?logo=jupyter&logoColor=white)
 ![ETL Pipeline](https://img.shields.io/badge/ETL-Pipeline-blue)
 
-## ETL API Livros
+## ETL de Dados Literários com API Open Library
 
 Pipeline de ETL desenvolvido em Python para coletar dados da Open Library API, tratá-los com Pandas e carregar tudo em um banco de dados MySQL com tabelas normalizadas, procedures, functions e views.
 
